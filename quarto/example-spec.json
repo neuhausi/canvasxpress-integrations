@@ -1,0 +1,14 @@
+{
+  "data": {
+    "y": {
+      "vars": ["Revenue"],
+      "smps": ["Q1", "Q2", "Q3", "Q4"],
+      "data": [[10, 14, 9, 17]]
+    }
+  },
+  "config": {
+    "graphType": "Bar",
+    "title": "Quarterly Revenue",
+    "colorScheme": "CanvasXpress"
+  }
+}

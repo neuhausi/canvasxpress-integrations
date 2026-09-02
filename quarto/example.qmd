@@ -1,0 +1,18 @@
+---
+title: "CanvasXpress in Quarto"
+format: html
+---
+
+The CanvasXpress Quarto extension embeds interactive, reproducible charts from a JSON spec.
+
+## A bar chart
+
+{{< canvasxpress example-spec.json >}}
+
+## Sizing
+
+You can set the canvas size:
+
+{{< canvasxpress spec="example-spec.json" width="800" height="300" >}}
+
+Each chart is a live CanvasXpress instance — hover, zoom, and the toolbar all work.
