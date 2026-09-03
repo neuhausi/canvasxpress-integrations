@@ -3,10 +3,21 @@
 A [Quarto](https://quarto.org) shortcode extension that embeds interactive, reproducible
 CanvasXpress charts in HTML documents from a JSON spec — no manual `<script>` wiring.
 
+## Install
+
+The extension is published from its own public repository (Quarto requires `_extensions/` at
+the repo root, so it cannot be installed from this monorepo subdirectory):
+
+```
+quarto add neuhausi/quarto-canvasxpress            # latest
+quarto add neuhausi/quarto-canvasxpress@v1.0.0     # pinned
+```
+
+Or copy `_extensions/canvasxpress/` into your project's `_extensions/` directory by hand.
+
 ## Use
 
-Copy `_extensions/canvasxpress/` into your project's `_extensions/` directory (or
-`quarto add <path-or-repo>`), then in any `.qmd`:
+In any `.qmd`:
 
 ```markdown
 {{< canvasxpress spec.json >}}

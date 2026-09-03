@@ -28,11 +28,16 @@ canvasxpress({
 
 ## Classic Observable notebook
 
-Import the module straight from a URL in a cell:
+Import the module straight from a URL in a cell. It is hosted in the public
+[`canvasxpress-js`](https://github.com/neuhausi/canvasxpress-js) distribution repo and served
+by jsDelivr (which sends the JavaScript MIME type that dynamic `import()` requires — a
+`raw.githubusercontent.com` URL does not):
 
 ```js
-canvasxpress = (await import("https://raw.githubusercontent.com/neuhausi/canvasXpress/master/integrations/observable/canvasxpress.js")).canvasxpress
+canvasxpress = (await import("https://cdn.jsdelivr.net/gh/neuhausi/canvasxpress-js@master/observable/canvasxpress.js")).canvasxpress
 ```
+
+Pin a release tag instead of `@master` for reproducibility (e.g. `@67.6.0`).
 
 then in another cell:
 
