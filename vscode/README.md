@@ -24,17 +24,35 @@ spec = {
 display({"application/canvasxpress+json": spec}, raw=True)
 ```
 
-**R (any Jupyter R kernel):**
+**R (IRkernel):** serialize the spec to a JSON string (so scalars stay scalars) and publish it.
 
 ```r
-IRdisplay::publish_mimebundle(list("application/canvasxpress+json" = spec_list))
+library(jsonlite)
+spec <- list(
+  data   = list(y = list(vars = list("Revenue"),
+                         smps = list("Q1", "Q2", "Q3", "Q4"),
+                         data = list(c(10, 14, 9, 17)))),
+  config = list(graphType = "Bar", title = "Quarterly Revenue", xAxis = list("Revenue"))
+)
+IRdisplay::publish_mimebundle(
+  list("application/canvasxpress+json" = toJSON(spec, auto_unbox = TRUE))
+)
 ```
 
-## Example
+> R note: this is **not** `canvasXpress()` from the R package — that returns an htmlwidget
+> (`text/html`), which this renderer does not handle. Emit the raw `{data, config}` spec instead.
 
-[`examples/canvasxpress-demo.ipynb`](examples/canvasxpress-demo.ipynb) is a ready-to-run
-notebook (Bar, Scatter, Heatmap) that emits the mime type. Open it in VS Code with this
-extension installed and run the cells to see the interactive charts.
+## Examples
+
+Two ready-to-run notebooks live in [`examples/`](examples). Open either in VS Code with this
+extension installed and run the cells to see the interactive charts:
+
+- [`canvasxpress-demo.ipynb`](examples/canvasxpress-demo.ipynb) — Python (Jupyter kernel)
+- [`canvasxpress-demo-R.ipynb`](examples/canvasxpress-demo-R.ipynb) — R (IRkernel)
+
+Each covers Bar, Scatter, and Heatmap, plus a final cell that renders straight from a
+`DataFrame` / `data.frame` (index/row-names → `vars`, columns → `smps`) — the common case
+where your data is already tabular rather than a hand-written `y` object.
 
 ## Build
 
