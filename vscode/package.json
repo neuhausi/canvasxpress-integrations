@@ -2,9 +2,10 @@
   "name": "canvasxpress-vscode",
   "displayName": "CanvasXpress Notebook Renderer",
   "description": "Render CanvasXpress interactive charts in VS Code notebook outputs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "canvasxpress",
-  "license": "LGPL-3.0-or-later",
+  "license": "LicenseRef-CanvasXpress-Community-Attribution",
+  "icon": "media/icon.png",
   "engines": {
     "vscode": "^1.70.0"
   },
