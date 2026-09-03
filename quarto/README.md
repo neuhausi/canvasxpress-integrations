@@ -9,8 +9,8 @@ The extension is published from its own public repository (Quarto requires `_ext
 the repo root, so it cannot be installed from this monorepo subdirectory):
 
 ```
-quarto add neuhausi/quarto-canvasxpress            # latest
-quarto add neuhausi/quarto-canvasxpress@v1.0.0     # pinned
+quarto add neuhausi/canvasxpress-quarto            # latest
+quarto add neuhausi/canvasxpress-quarto@v1.0.0     # pinned
 ```
 
 Or copy `_extensions/canvasxpress/` into your project's `_extensions/` directory by hand.
