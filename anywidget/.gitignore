@@ -1,0 +1,8 @@
+# The repo-root .gitignore ignores **/__init__.py globally; this package needs its
+# __init__.py tracked (it IS the package). Re-include it here.
+!src/canvasxpress_anywidget/__init__.py
+
+# Local build/test artifacts
+dist/
+build/
+*.egg-info/

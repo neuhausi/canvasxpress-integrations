@@ -1,0 +1,50 @@
+{
+  "name": "canvasxpress-vscode",
+  "displayName": "CanvasXpress Notebook Renderer",
+  "description": "Render CanvasXpress interactive charts in VS Code notebook outputs",
+  "version": "0.1.0",
+  "publisher": "canvasxpress",
+  "license": "LGPL-3.0-or-later",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Notebooks",
+    "Visualization"
+  ],
+  "keywords": [
+    "canvasxpress",
+    "notebook",
+    "renderer",
+    "visualization",
+    "bioinformatics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neuhausi/canvasXpress"
+  },
+  "homepage": "https://canvasxpress.org",
+  "contributes": {
+    "notebookRenderer": [
+      {
+        "id": "canvasxpress-renderer",
+        "displayName": "CanvasXpress",
+        "entrypoint": "./out/renderer.js",
+        "mimeTypes": [
+          "application/canvasxpress+json"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "vscode:prepublish": "node esbuild.js --minify"
+  },
+  "devDependencies": {
+    "@types/vscode-notebook-renderer": "^1.72.0",
+    "esbuild": "^0.21.0",
+    "typescript": "^5.0.0",
+    "vscode-notebook-renderer": "^1.1.0"
+  }
+}

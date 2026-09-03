@@ -1,0 +1,8 @@
+# Repo-root .gitignore ignores **/__init__.py globally; this package needs its
+# __init__.py tracked. Re-include it here.
+!src/canvasxpress_magic/__init__.py
+
+# Local build/test artifacts
+dist/
+build/
+*.egg-info/
