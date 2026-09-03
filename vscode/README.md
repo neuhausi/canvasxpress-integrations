@@ -30,6 +30,12 @@ display({"application/canvasxpress+json": spec}, raw=True)
 IRdisplay::publish_mimebundle(list("application/canvasxpress+json" = spec_list))
 ```
 
+## Example
+
+[`examples/canvasxpress-demo.ipynb`](examples/canvasxpress-demo.ipynb) is a ready-to-run
+notebook (Bar, Scatter, Heatmap) that emits the mime type. Open it in VS Code with this
+extension installed and run the cells to see the interactive charts.
+
 ## Build
 
 ```bash
@@ -54,5 +60,8 @@ tested outside the VS Code renderer API.
 
 ## License
 
-Dual-licensed. The core library is `LGPL-3.0-or-later`; commercial terms are available — see
-<https://canvasxpress.org/license.html>.
+This extension and the CanvasXpress JavaScript library it renders are covered by the
+**CanvasXpress Community License (Attribution)** (`LicenseRef-CanvasXpress-Community-Attribution`;
+see [`LICENSE`](LICENSE)). CanvasXpress is free to use anywhere — including in commercial products —
+as long as the attribution mark it renders stays visible; a Commercial License (license key) removes
+the mark. Terms and pricing: <https://canvasxpress.org/license.html>.
