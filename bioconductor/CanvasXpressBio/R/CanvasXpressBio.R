@@ -83,10 +83,11 @@ setMethod(
             mat <- mat[keep, , drop = FALSE]
         }
 
+        use_var_annot <- nrow(var_annot) == nrow(mat) && ncol(var_annot)
         canvasXpress::canvasXpress(
             data      = mat,
             smpAnnot  = if (ncol(smp_annot)) smp_annot else NULL,
-            varAnnot  = if (nrow(var_annot) == nrow(mat) && ncol(var_annot)) var_annot else NULL,
+            varAnnot  = if (use_var_annot) var_annot else NULL,
             graphType = graphType,
             ...)
     })
@@ -118,8 +119,9 @@ setMethod(
 cxvolcano <- function(x, logfc = "log2FoldChange", pval = "padj", ...) {
     df <- as.data.frame(x)
     if (!all(c(logfc, pval) %in% colnames(df))) {
-        stop("Columns '", logfc, "' and '", pval,
-             "' must both be present in 'x'.", call. = FALSE)
+        stop(
+            "Columns '", logfc, "' and '", pval,
+            "' must both be present in 'x'.", call. = FALSE)
     }
     ok <- is.finite(df[[logfc]]) & is.finite(df[[pval]]) & df[[pval]] > 0
     df <- df[ok, , drop = FALSE]
