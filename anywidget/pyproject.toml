@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "CanvasXpress interactive charts as Jupyter / Colab / VS Code / marimo notebook widgets via anywidget"
 readme = "README.md"
 requires-python = ">=3.8"
-license = "LGPL-3.0-or-later"
+license = "MIT"
 authors = [{ name = "Isaac Neuhaus", email = "imnphd@gmail.com" }]
 keywords = ["canvasxpress", "visualization", "jupyter", "anywidget", "bioinformatics", "genomics"]
 dependencies = ["anywidget>=0.9.0"]

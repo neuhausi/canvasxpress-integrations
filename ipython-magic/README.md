@@ -46,5 +46,5 @@ Both accept sizing flags:
 
 ## License
 
-Dual-licensed. The core library is `LGPL-3.0-or-later`; commercial terms are available — see
+This package is MIT-licensed. The CanvasXpress JavaScript library it loads is distributed separately under the CanvasXpress Community License (Attribution), free with a visible attribution mark and with commercial terms for mark removal — see https://www.canvasxpress.org/license.html.
 <https://canvasxpress.org/license.html>.

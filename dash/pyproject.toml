@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "CanvasXpress interactive charts in Dash apps (no build step)"
 readme = "README.md"
 requires-python = ">=3.8"
-license = "LGPL-3.0-or-later"
+license = "MIT"
 authors = [{ name = "Isaac Neuhaus", email = "imnphd@gmail.com" }]
 keywords = ["canvasxpress", "visualization", "dash", "plotly", "bioinformatics", "genomics"]
 dependencies = ["dash>=2.0"]
