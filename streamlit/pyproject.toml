@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "canvasxpress-streamlit"
-version = "0.1.0"
+version = "0.1.1"
 description = "CanvasXpress interactive charts in Streamlit apps (no build step)"
 readme = "README.md"
 requires-python = ">=3.8"
