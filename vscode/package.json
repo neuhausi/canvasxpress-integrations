@@ -2,7 +2,7 @@
   "name": "canvasxpress-vscode",
   "displayName": "CanvasXpress Notebook Renderer",
   "description": "Render CanvasXpress interactive charts in VS Code notebook outputs",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publisher": "canvasxpress",
   "license": "LicenseRef-CanvasXpress-Community-Attribution",
   "icon": "media/icon.png",
@@ -32,7 +32,9 @@
         "displayName": "CanvasXpress",
         "entrypoint": "./out/renderer.js",
         "mimeTypes": [
-          "application/canvasxpress+json"
+          "application/canvasxpress+json",
+          "text/html",
+          "application/javascript"
         ]
       }
     ]
