@@ -21,6 +21,7 @@ Quarto, Observable, and VS Code without writing any JavaScript or running a buil
 | [`quarto/`](quarto/) | CanvasXpress Quarto extension | Quarto | A `{{< canvasxpress >}}` shortcode for Quarto documents. |
 | [`observable/`](observable/) | CanvasXpress for Observable | Observable / jsDelivr | An ES module for Observable notebooks. |
 | [`posit-connect/`](posit-connect/) | Posit Connect examples | docs only | Deploy CanvasXpress on Posit Connect (RStudio Connect) via Shiny, R Markdown / Quarto, or Plumber. |
+| [`databricks/`](databricks/) | Databricks notebook examples | docs only | Render CanvasXpress charts in Databricks notebooks via `displayHTML()` (volcano + Kaplan-Meier, Python & R). |
 | [`bioconductor/CanvasXpressBio/`](bioconductor/CanvasXpressBio/) | `CanvasXpressBio` | Bioconductor | CanvasXpress visualizations for Bioconductor data structures (e.g. `SummarizedExperiment`). |
 
 ## Installation
@@ -47,6 +48,14 @@ The VS Code renderer is on the Marketplace as **CanvasXpress Notebook Renderer**
 (publisher `canvasxpress`). The Observable module is served from jsDelivr.
 
 See each package's own README for usage, examples, and API details.
+
+## Related repositories
+
+- [`canvasxpress-connectors`](https://github.com/neuhausi/canvasxpress-connectors) — feed
+  CanvasXpress from **authenticated data sources** (SQL databases incl. Databricks SQL
+  Warehouses, Google Sheets, GA4, Salesforce, ServiceNow) by reshaping query results into
+  CanvasXpress data objects served from your own origin, so the browser never holds a
+  credential. The integrations here *render* charts; the connectors repo *supplies the data*.
 
 ## Resources
 
