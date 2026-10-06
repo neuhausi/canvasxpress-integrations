@@ -20,6 +20,7 @@ Quarto, Observable, and VS Code without writing any JavaScript or running a buil
 | [`vscode/`](vscode/) | `canvasxpress-vscode` | VS Code Marketplace | Notebook-output renderer for the `application/canvasxpress+json` MIME type. |
 | [`quarto/`](quarto/) | CanvasXpress Quarto extension | Quarto | A `{{< canvasxpress >}}` shortcode for Quarto documents. |
 | [`observable/`](observable/) | CanvasXpress for Observable | Observable / jsDelivr | An ES module for Observable notebooks. |
+| [`posit-connect/`](posit-connect/) | Posit Connect examples | docs only | Deploy CanvasXpress on Posit Connect (RStudio Connect) via Shiny, R Markdown / Quarto, or Plumber. |
 | [`bioconductor/CanvasXpressBio/`](bioconductor/CanvasXpressBio/) | `CanvasXpressBio` | Bioconductor | CanvasXpress visualizations for Bioconductor data structures (e.g. `SummarizedExperiment`). |
 
 ## Installation
